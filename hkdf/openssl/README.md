@@ -1,7 +1,5 @@
 # OpenSSL HKDF
 
-OpenSSL requires the
-
 ```bash
 # Derive a key using HKDF which requires an input key, a salt and info
 openssl kdf -keylen 32 \

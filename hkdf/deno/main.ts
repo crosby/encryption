@@ -1,4 +1,4 @@
-// Generate random input key material
+// Generate a random IKM, salt and info label
 const ikm = crypto.getRandomValues(new Uint8Array(32));
 const salt = crypto.getRandomValues(new Uint8Array(32));
 const info = new TextEncoder().encode("myapp v1 key material");
@@ -12,7 +12,7 @@ const hkdfBase = await crypto.subtle.importKey(
   ["deriveBits"],
 );
 
-// Then we can generate random material (e.g. 256 bits) using HKDF
+// Then we can use HKDF to generate random material (e.g. 256 bits) using the salt, info label and base
 const okmBuf = await crypto.subtle.deriveBits(
   { name: "HKDF", hash: "SHA-256", salt, info },
   hkdfBase,
