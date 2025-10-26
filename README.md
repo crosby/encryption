@@ -28,7 +28,7 @@ I've generally explored these themes in the following language (with maybe more 
 * [] HKDF-SHA-256 KDF (key derivation function)
 * [] SHA-256 hashing
 * [] Argon2id for password hashing
-* [] ML-KEM (Kyber)
+* [] ML-KEM (Kyber) (Key encapsulation mechanism)
 * [] ML-DSA (Dilithium) signatures to replace Ed25519
 
 ## Formats
