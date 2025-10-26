@@ -21,6 +21,16 @@ I've generally explored these themes in the following language (with maybe more 
 1. Deno
 1. Rust
 
+## TODO
+
+* [] Ed25519 key generation and signatures in Rust
+* [] X25519 asymmetric key agreements
+* [] HKDF-SHA-256 KDF (key derivation function)
+* [] SHA-256 hashing
+* [] Argon2id for password hashing
+* [] ML-KEM (Kyber)
+* [] ML-DSA (Dilithium) signatures to replace Ed25519
+
 ## Formats
 
 There appear to be two formats for storing generated keys:

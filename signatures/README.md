@@ -1,5 +1,7 @@
 # Signatures
 
+## Ed25519
+
 Modern day best practices indicate that Ed25519 (Edwards25519) signatures are best for most applications. Ed25519 provides:
 
 * 128-bit security
@@ -10,4 +12,6 @@ Modern day best practices indicate that Ed25519 (Edwards25519) signatures are be
 * Broad interoperability
 * Strong security
 
-Ed448 _could_ be used, but only if we need post-2050 longevity or need Suite B / CNSA 2.0 or FIPS 186-5 level of assurance.
+## ML-DSA (Dilithium)
+
+ML-DSA is the NIST recommended post-quantum digital signature algorithm that can replace/augment Ed25519.

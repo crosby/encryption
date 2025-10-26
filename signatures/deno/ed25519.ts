@@ -8,7 +8,7 @@ const { privateKey, publicKey } = await crypto.subtle.generateKey(
 // Generate a UTF-8 encoded binary representation of the message "Hello"
 const message = new TextEncoder().encode("Hello");
 
-// Generate a signature by using the private key and passing
+// Generate a signature by using the private key
 const sig = await crypto.subtle.sign(
   { name: "Ed25519" },
   privateKey,

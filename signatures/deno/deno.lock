@@ -1,10 +1,30 @@
 {
   "version": "5",
   "specifiers": {
+    "jsr:@noble/curves@2.0": "2.0.1",
+    "jsr:@noble/hashes@2": "2.0.1",
+    "jsr:@noble/hashes@2.0": "2.0.1",
+    "jsr:@noble/post-quantum@~0.5.2": "0.5.2",
     "jsr:@std/assert@^1.0.15": "1.0.15",
     "jsr:@std/internal@^1.0.12": "1.0.12"
   },
   "jsr": {
+    "@noble/curves@2.0.1": {
+      "integrity": "21ef41d207a203f60ba37a4fdcbc4f4a545b10c5dab7f293889f18292f81ab23",
+      "dependencies": [
+        "jsr:@noble/hashes@2"
+      ]
+    },
+    "@noble/hashes@2.0.1": {
+      "integrity": "e0e908292a0bf91099cf8ba0720a1647cef82ab38b588815b5e9535b4ff4d7bb"
+    },
+    "@noble/post-quantum@0.5.2": {
+      "integrity": "e15f0a636f8d3b39ad584fe9b8a7dd203a6330e9ec48728be7edd6af8e2c7136",
+      "dependencies": [
+        "jsr:@noble/curves",
+        "jsr:@noble/hashes@2.0"
+      ]
+    },
     "@std/assert@1.0.15": {
       "integrity": "d64018e951dbdfab9777335ecdb000c0b4e3df036984083be219ce5941e4703b",
       "dependencies": [
@@ -17,6 +37,7 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@noble/post-quantum@~0.5.2",
       "jsr:@std/assert@^1.0.15"
     ]
   }
