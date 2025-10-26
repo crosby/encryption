@@ -1,6 +1,6 @@
 # OpenSSL
 
-## Key Generation
+## Ed25519
 
 In PEM format:
 
@@ -50,4 +50,34 @@ wc -c msg.sig
 
 # Verify the signature against the public key and message (should return "Signature Verified Successfully")
 openssl pkeyutl -verify -pubin -inkey ed25519_public.pem -in msg.txt -sigfile msg.sig
+```
+
+## ML-DSA
+
+Generate an ML-DSA private key in DER format:
+
+```bash
+openssl genpkey -algorithm mldsa65 -outform DER -out mldsa_private.der
+```
+
+Generate the ML-DSA public key from the private key:
+
+```bash
+openssl pkey -in mldsa_private.der -inform DER -pubout -outform DER -out mldsa_public.der
+```
+
+Sign and verify using the ML-DSA keys:
+
+```bash
+# Generate a short message to sign
+printf 'hello\n' > msg.txt
+
+# Generate a digest using SHA-512 and the private key
+openssl pkeyutl -sign -inkey mldsa_private.der -in msg.txt -out msg.sig
+
+# Verify that the signature is indeed 64 bytes
+wc -c msg.sig
+
+# Verify the signature against the public key and message (should return "Signature Verified Successfully")
+openssl pkeyutl -verify -pubin -inkey mldsa_public.der -in msg.txt -sigfile msg.sig
 ```
