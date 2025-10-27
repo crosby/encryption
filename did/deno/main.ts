@@ -13,13 +13,15 @@ const { publicKey: encPublicKey, secretKey: _encSecretKey } = ml_kem768.keygen(
 );
 
 // Since the DID spec doesn't natively support ML-DSA and ML-KEM keys, we can rely
-// on it's extendability and just represent these keys as multibase
+// on it's extendability and just represent these keys as multibase.
+// The multibase format is just a tag and the key material encoded using a scheme.
+// Here we're just using the Base64 URL No Padding scheme (https://www.w3.org/TR/cid-1.0/#multibase-0)
 function multibase(algTag: string, raw: Uint8Array): string {
   const tag = new TextEncoder().encode(algTag + "\0");
   const bytes = new Uint8Array(tag.length + raw.length);
   bytes.set(tag, 0);
   bytes.set(raw, tag.length);
-  return base64url.encode(bytes); // starts with 'u'
+  return base64url.encode(bytes);
 }
 
 // The DID that we're creating
