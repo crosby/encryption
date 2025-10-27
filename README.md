@@ -23,13 +23,13 @@ I've generally explored these themes in the following language (with maybe more 
 
 ## TODO
 
-* [] Ed25519 key generation and signatures in Rust
-* [] X25519 asymmetric key agreements
-* [] HKDF-SHA-256 KDF (key derivation function)
-* [] SHA-256 hashing
+* [x] Ed25519 key generation and signatures
+* [x] X25519 asymmetric key agreements
+* [x] HKDF-SHA-256 KDF (key derivation function)
+* [x] SHA-256 hashing
 * [] Argon2id for password hashing
-* [] ML-KEM (Kyber) (Key encapsulation mechanism)
-* [] ML-DSA (Dilithium) signatures to replace Ed25519
+* [x] ML-KEM (Kyber) (Key encapsulation mechanism)
+* [x] ML-DSA (Dilithium) signatures to replace Ed25519
 
 ## Formats
 
