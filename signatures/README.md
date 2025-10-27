@@ -15,3 +15,7 @@ Modern day best practices indicate that Ed25519 (Edwards25519) signatures are be
 ## ML-DSA (Dilithium)
 
 ML-DSA is the NIST recommended post-quantum digital signature algorithm that can replace/augment Ed25519.
+
+## JWS
+
+JSON Web Signatures are a widely adopted standard for representing signed data in JSON format.
