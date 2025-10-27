@@ -11,6 +11,7 @@ This repository represents my investigations into modern day cryptographic best-
 1. Hashing
 1. Encryption
 1. Certificates
+1. Decentralized Identities
 
 It focuses on modern best-practices (as of 2025) and includes additional practical research into how and when to actually use
 these primitives in the development of modern secure protocols.
@@ -27,9 +28,10 @@ I've generally explored these themes in the following language (with maybe more 
 * [x] X25519 asymmetric key agreements
 * [x] HKDF-SHA-256 KDF (key derivation function)
 * [x] SHA-256 hashing
-* [] Argon2id for password hashing
+* [ ] Argon2id for password hashing
 * [x] ML-KEM (Kyber) (Key encapsulation mechanism)
 * [x] ML-DSA (Dilithium) signatures to replace Ed25519
+* [x] Post-Quantum DIDs
 
 ## Formats
 
