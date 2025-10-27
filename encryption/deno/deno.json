@@ -4,6 +4,7 @@
   },
   "imports": {
     "@noble/ciphers": "jsr:@noble/ciphers@^2.0.1",
-    "@std/assert": "jsr:@std/assert@1"
+    "@std/assert": "jsr:@std/assert@1",
+    "jose": "npm:jose@^6.1.0"
   }
 }

@@ -3,7 +3,8 @@
   "specifiers": {
     "jsr:@noble/ciphers@^2.0.1": "2.0.1",
     "jsr:@std/assert@1": "1.0.15",
-    "jsr:@std/internal@^1.0.12": "1.0.12"
+    "jsr:@std/internal@^1.0.12": "1.0.12",
+    "npm:jose@^6.1.0": "6.1.0"
   },
   "jsr": {
     "@noble/ciphers@2.0.1": {
@@ -19,10 +20,16 @@
       "integrity": "972a634fd5bc34b242024402972cd5143eac68d8dffaca5eaa4dba30ce17b027"
     }
   },
+  "npm": {
+    "jose@6.1.0": {
+      "integrity": "sha512-TTQJyoEoKcC1lscpVDCSsVgYzUDg/0Bt3WE//WiTPK6uOCQC2KZS4MpugbMWt/zyjkopgZoXhZuCi00gLudfUA=="
+    }
+  },
   "workspace": {
     "dependencies": [
       "jsr:@noble/ciphers@^2.0.1",
-      "jsr:@std/assert@1"
+      "jsr:@std/assert@1",
+      "npm:jose@^6.1.0"
     ]
   }
 }

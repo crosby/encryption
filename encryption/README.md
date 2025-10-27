@@ -21,3 +21,7 @@ XChaCha20-Poly1305 appears to be best for places like WebCrypto, mobile, embedde
 XChaCha20 is preferred over ChaCha20 since randomized nonces can be used safely without risk of collision.
 
 ChaCha20 can still be used (and is by TLS 1.3/QUIC) but with counter-based nonces. This can be done but XChaCha20 protects developers from the risk of collisions breaking security.
+
+## JWE
+
+JSON Web Encryption is a widely adopted and well supported specification for sharing encrypted data in JSON format.
